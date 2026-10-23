@@ -1,26 +1,27 @@
 # SpicyPS5
 
-> **"A Complete PlayStation 5 Inside a Window — Built to Run Smoothly on Any PC."**
+> **The PlayStation 5 — Inside a Window — Smooth on Every Machine**
 
-`SpicyPS5` unifies two complementary open-source PlayStation 5 engines under **`GPL-2.0-only`** together with **Sony PlayStation 5 System Software `26.06-14.00.00`** ingestion, **`SpicyVSH`** (a pixel-faithful 60/120 FPS PS5 Visual Shell & Control Center), and **`SpicyScale`** (universal low-spec hardware scaling from 4–8 GB RAM laptops & handhelds up to 4K120 HDR ray-traced desktops):
-
-| Repository Asset | Files | Lines of Code | Core Engineering Role |
-| :--- | ---: | ---: | :--- |
-| **`KytyPS5-main.zip`** | `489` | `279,319` | Dynamic in-process ELF/SPRX/ZArchive (`.zar`) runtime, `1,702` unique `LIB_FUNC` HLE exports, Vulkan 1.3 renderer, Multi-Level GPU Page Table + SIGSEGV/VEH fault manager, `13` compute micro/macro tilers, SSA RDNA2 recompiler with hardware `VK_KHR_ray_query` Ray Tracing, DualSense USB/Bluetooth + Haptics + Adaptive Triggers, Qt6 launcher & updater |
-| **`AnyPS5-main.zip`** | `3,275` | `730,311` | Native AOT binary relinker (`ELF` -> native Windows `PE`, Linux `ELF`, macOS `Mach-O`, and `WASM`) with `--to-intel` / `--to-rosetta` lowering, **`5,549` implemented PS5 HLE exports across `368` PRX libraries**, **`1,190` RDNA2 (`gfx10`) shader ISA opcodes (`100.00%`)**, `unwrap_self.py`, `import_audit.py`, and `hw-oracle` |
-| **Unified `SpicyPS5` Foundation** | **`3,764`** | **`1,009,630`** | **`5,829` Day-1 unique working HLE functions** (`43` immediate cross-engine gap closures + `237` `KytyPS5`-exclusive exports + `1,422` 1:1 cross-validated exports), Firmware `26.06-14.00.00` PUP/SELF hybrid engine, `SpicyVSH`, `SpicyScale`, and Live Desktop + Web Window (`0.0.0.0:8080`) |
+**SpicyPS5** is a cross-platform PlayStation 5 compatibility runtime, native binary translator, hardware-scaled RDNA2 graphics compiler, and pixel-faithful **System Software `26.06-14.00.00`** visual shell designed to run seamlessly inside a native desktop or live remote browser window across **Windows**, **Linux**, and **macOS** — from modest **4–8 GB RAM laptops, mini-PCs, and handhelds** up to **4K120 HDR ray-traced desktops**.
 
 ---
 
-## Ready-to-Use Files in This Repository
+## Core Architecture Highlights
 
-- **[`PROMPT.md`](./PROMPT.md)** — **The Complete Master Engineering Specification & Single Autonomous Build Prompt** for the next chat session.
-- **[`docs/CROSS_AUDIT_REPORT.md`](./docs/CROSS_AUDIT_REPORT.md)** — Exact programmatic cross-audit of `AnyPS5-main.zip` + `KytyPS5-main.zip`, including all **43 immediate file-and-line gap closures** and full **RDNA2 ISA coverage**.
-- **[`docs/CROSS_AUDIT_INVENTORY.json`](./docs/CROSS_AUDIT_INVENTORY.json)** — Machine-readable symbol, NID, and shader inventory across all `368` PS5 PRX modules.
-- **[`scripts/bootstrap_workspace.py`](./scripts/bootstrap_workspace.py)** — Turnkey workspace bootstrapper that unpacks both `.zip` archives into `vendor/` and hydrates all required `3rdparty/*` GitHub submodules cleanly.
-- **[`tools/audit_reference_engines.py`](./tools/audit_reference_engines.py)** — Zero-dependency Python 3 audit & Firmware `26.06-14.00.00` inspector (`python3 tools/audit_reference_engines.py --firmware <PUP-or-folder>`).
+| Subsystem | Technical Scope |
+| :--- | :--- |
+| **`SpicyVSH` (`26.06-14.00.00`)** | Full 60/120 FPS PlayStation 5 Visual Shell, boot animation, polyphonic startup & UI chimes, Welcome Hub, Games & Media tabs, Store, Library, Activities, live PS-Button Control Center overlay, Create overlay, On-Screen IME keyboard, 28 languages, Safe Mode, Rest Mode, and all 15 Settings menus |
+| **`SpicyScale` Universal Scaling** | Automatic 6-tier hardware engine (**Tier S** zero-GPU software/Lavapipe -> **Tier 4** 4K120 HDR RT), `< 220 MB` idle sparse demand-paged virtual RAM, LRU Zstd cold-page compression, adaptive spin-to-futex CPU governor, `SSE4a` instruction lowering, and spatial **EASU + RCAS / FSR** upscaling |
+| **Dual Execution Core** | Dynamic in-process `ELF64` / `SELF` / `SPRX` / `.zar` / `PFS` / `PKG` loader (`PT_SCE_DYNLIBDATA`, `PT_TLS`, SysV <-> Host ABI trampolines) **plus** Ahead-of-Time Native Binary Translation mode |
+| **368-Module OS Surface** | Pre-indexed symbol & exact 11-character `SHA-1` Base64 NID registry across **`368` PlayStation 5 system modules (`11,703` symbols)** in [`data/ps5_nid_database.json`](./data/ps5_nid_database.json) |
+| **Oberon RDNA2 Compiler** | Complete **`20`-family / `1,190`-opcode** RDNA2 (`gfx10`) shader ISA specification in [`data/rdna2_isa_spec.json`](./data/rdna2_isa_spec.json), `PM4` + `SceAgc` command processor, `SrtWalker`, 13 micro/macro tilers, and dual hardware `VK_KHR_ray_query` + software compute BVH4 ray tracing |
+| **System Software `26.06-14.00.00`** | Complete `BLS2` (`0x32424C53`), `PUP` (`0xEEF51454`), entropy analyzer, and `SELF`/`SPRX` unwrapper ([`tools/inspect_firmware.py`](./tools/inspect_firmware.py)) supporting both retail update packages and extracted firmware directories |
 
-## Quick Launch in Next Chat
+---
 
-1. Optionally drop your PS5 Firmware **`26.06-14.00.00`** (`PS5UPDATE.PUP` and/or decrypted `firmware/` dump) into the repository root or `firmware/`.
-2. Paste the prompt inside **[`PROMPT.md`](./PROMPT.md)** (or reference `@PROMPT.md` and `@docs/CROSS_AUDIT_REPORT.md`).
+## Workspace Manifest
+
+- **[`PROMPT.md`](./PROMPT.md)** — Complete A-to-Z Master Architectural Specification & 20-Phase Autonomous Build Prompt.
+- **[`data/ps5_nid_database.json`](./data/ps5_nid_database.json)** — All `368` system modules and `11,703` pre-computed 11-character `SHA-1` NIDs.
+- **[`data/rdna2_isa_spec.json`](./data/rdna2_isa_spec.json)** — All `20` RDNA2 instruction encoding classes and `1,190` shader opcodes.
+- **[`tools/inspect_firmware.py`](./tools/inspect_firmware.py)** — Standalone System Software `26.06-14.00.00` container & NID inspection utility.
