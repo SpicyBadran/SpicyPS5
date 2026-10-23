@@ -1,0 +1,22 @@
+# Build directories & artifacts
+_Build/
+build/
+out/
+dist/
+cmake-build-*/
+
+# Hydrated reference checkouts & caches (recreated cleanly from the root .zip archives via scripts/bootstrap_workspace.py)
+vendor/
+.spicy_cache/
+
+# OS & editor files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Optional large raw firmware drops if >100MB (keep firmware manifests tracked; check git lfs or local placement for >100MB .PUP blobs)
+_TempData/
+_DownloadData/
+_ShaderCache/
+_Saves/
