@@ -1,6 +1,6 @@
 # SpicyPS5
 
-> **The PlayStation 5 — Inside a Window — Smooth on Every Machine**
+> **The PlayStation 5 — Inside a Window**
 
 **SpicyPS5** is a cross-platform PlayStation 5 compatibility runtime, native binary translator, hardware-scaled RDNA2 graphics compiler, and pixel-faithful **System Software `26.06-14.00.00`** visual shell designed to run seamlessly inside a native desktop or live remote browser window across **Windows**, **Linux**, and **macOS** — from modest **4–8 GB RAM laptops, mini-PCs, and handhelds** up to **4K120 HDR ray-traced desktops**.
 
