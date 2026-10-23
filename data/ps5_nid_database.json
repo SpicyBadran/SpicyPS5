@@ -2342,7 +2342,7 @@
         },
         {
           "symbol": "sceAmprSinh",
-          "nid": "sceAmprSinh"
+          "nid": "vsqv1q8WA7E"
         },
         {
           "symbol": "sceAmprStrtokS",
@@ -8630,7 +8630,7 @@
         },
         {
           "symbol": "sceFiosStat",
-          "nid": "sceFiosStat"
+          "nid": "QKsI9N7K1zE"
         },
         {
           "symbol": "sceFiosStatSync",
@@ -9516,7 +9516,7 @@
         },
         {
           "symbol": "LibraryInit",
-          "nid": "LibraryInit"
+          "nid": "vmodzKn5f3M"
         },
         {
           "symbol": "LibraryLoadGlyphCached",
@@ -9540,7 +9540,7 @@
         },
         {
           "symbol": "LibraryTerm",
-          "nid": "LibraryTerm"
+          "nid": "xEUZxsvCoWk"
         },
         {
           "symbol": "RendererCreate",
@@ -10529,7 +10529,7 @@
         },
         {
           "symbol": "sceFsWsFsck",
-          "nid": "sceFsWsFsck"
+          "nid": "SWK-+lhUK7s"
         },
         {
           "symbol": "sceFsWsGetStatus",
@@ -11525,7 +11525,7 @@
       "exports": [
         {
           "symbol": "sceHmdClose",
-          "nid": "sceHmdClose"
+          "nid": "6biw1XHTSqQ"
         },
         {
           "symbol": "sceHmdDistortionGet2dVrCommand",
@@ -12547,7 +12547,7 @@
         },
         {
           "symbol": "sceHmd2Open",
-          "nid": "sceHmd2Open"
+          "nid": "f3kPeoTZnIE"
         },
         {
           "symbol": "sceHmd2ReprojectionBeginFrame",
@@ -14283,7 +14283,7 @@
         },
         {
           "symbol": "WorkerEntry",
-          "nid": "WorkerEntry"
+          "nid": "p6ylr0O1ED8"
         },
         {
           "symbol": "_ZN3sce3Job10JobManager10initializeEPvmjjPKNS1_12ConfigParamsE",
@@ -17917,7 +17917,7 @@
         },
         {
           "symbol": "sceMbusInit",
-          "nid": "sceMbusInit"
+          "nid": "wRPXMGtkOq0"
         },
         {
           "symbol": "sceMbusIsBgmProhibited",
@@ -18053,7 +18053,7 @@
         },
         {
           "symbol": "sceMbusTerm",
-          "nid": "sceMbusTerm"
+          "nid": "hykD8qmO6XA"
         },
         {
           "symbol": "sceMbusUnregisterDriver",
@@ -18185,7 +18185,7 @@
         },
         {
           "symbol": "sceMoveInit",
-          "nid": "sceMoveInit"
+          "nid": "j1ITE-EoJmE"
         },
         {
           "symbol": "sceMoveIsReproductionModel",
@@ -18197,7 +18197,7 @@
         },
         {
           "symbol": "sceMoveOpen",
-          "nid": "sceMoveOpen"
+          "nid": "HzC60MfjJxU"
         },
         {
           "symbol": "sceMoveReadStateLatest",
@@ -18237,7 +18237,7 @@
         },
         {
           "symbol": "sceMoveTerm",
-          "nid": "sceMoveTerm"
+          "nid": "tsZi60H4ypY"
         },
         {
           "symbol": "sceMoveWriteCalibrationInfo",
@@ -19145,7 +19145,7 @@
         },
         {
           "symbol": "sceNetIoctl",
-          "nid": "sceNetIoctl"
+          "nid": "ghqRRVQxqKo"
         },
         {
           "symbol": "sceNetListen",
@@ -29875,7 +29875,7 @@
         },
         {
           "symbol": "sceRudpBind",
-          "nid": "sceRudpBind"
+          "nid": "l4SLBpKUDK4"
         },
         {
           "symbol": "sceRudpCreateContext",
@@ -29979,7 +29979,7 @@
         },
         {
           "symbol": "sceRudpRead",
-          "nid": "sceRudpRead"
+          "nid": "rZqWV3eXgOA"
         },
         {
           "symbol": "sceRudpSetEventHandler",
@@ -30022,7 +30022,7 @@
         },
         {
           "symbol": "sceS3daOpen",
-          "nid": "sceS3daOpen"
+          "nid": "lE4k3hlQbZk"
         },
         {
           "symbol": "sceS3daSendData",
@@ -30763,7 +30763,7 @@
         },
         {
           "symbol": "sceSdmaOpen",
-          "nid": "sceSdmaOpen"
+          "nid": "rMaiuPQsNoM"
         },
         {
           "symbol": "sceSdmaQueryWorkingBufferSize",
@@ -31232,7 +31232,7 @@
       "exports": [
         {
           "symbol": "sceSpGetPid",
-          "nid": "sceSpGetPid"
+          "nid": "jWd9FwvNv4E"
         },
         {
           "symbol": "sceSpKernelGettimeofday",
@@ -31420,7 +31420,7 @@
         },
         {
           "symbol": "sceSpSelect",
-          "nid": "sceSpSelect"
+          "nid": "YsLBZ7qPu20"
         }
       ]
     },
@@ -31504,7 +31504,7 @@
         },
         {
           "symbol": "sceSslClose",
-          "nid": "sceSslClose"
+          "nid": "viRXSHZYd0c"
         },
         {
           "symbol": "sceSslConnect",
@@ -31684,7 +31684,7 @@
         },
         {
           "symbol": "sceSslWrite",
-          "nid": "sceSslWrite"
+          "nid": "iNjkt9Poblw"
         }
       ]
     },
@@ -35359,7 +35359,7 @@
         },
         {
           "symbol": "sceUsbdExit",
-          "nid": "sceUsbdExit"
+          "nid": "Fq6+0Fm55xU"
         },
         {
           "symbol": "sceUsbdFillBulkTransfer",
@@ -35471,7 +35471,7 @@
         },
         {
           "symbol": "sceUsbdInit",
-          "nid": "sceUsbdInit"
+          "nid": "TOhg7P6kTH4"
         },
         {
           "symbol": "sceUsbdInterruptTransfer",
@@ -35491,7 +35491,7 @@
         },
         {
           "symbol": "sceUsbdOpen",
-          "nid": "sceUsbdOpen"
+          "nid": "VJ6oMq-Di2U"
         },
         {
           "symbol": "sceUsbdOpenDeviceWithVidPid",
@@ -38440,7 +38440,7 @@
         },
         {
           "symbol": "CollateHash",
-          "nid": "CollateHash"
+          "nid": "1ectkiOsXWs"
         },
         {
           "symbol": "CollateTransform",
@@ -38544,7 +38544,7 @@
         },
         {
           "symbol": "RetainFacet",
-          "nid": "RetainFacet"
+          "nid": "b5TQT0B5KFM"
         },
         {
           "symbol": "RetainLocale",
@@ -41196,7 +41196,7 @@
         },
         {
           "symbol": "defaultFree",
-          "nid": "defaultFree"
+          "nid": "2UXdj2i5iDk"
         },
         {
           "symbol": "defaultPosixAlign",
